@@ -71,13 +71,23 @@
   const robloxProfileInput = document.getElementById('robloxProfileInput');
 
   function openVerifyModal() {
-    verifyModal.classList.add('open');
-    robloxProfileInput.focus();
+    if (verifyModal) {
+      verifyModal.classList.add('open');
+      if (robloxProfileInput) {
+        setTimeout(function () {
+          robloxProfileInput.focus();
+        }, 100);
+      }
+    }
   }
 
   function closeVerifyModal() {
-    verifyModal.classList.remove('open');
-    robloxProfileInput.value = '';
+    if (verifyModal) {
+      verifyModal.classList.remove('open');
+    }
+    if (robloxProfileInput) {
+      robloxProfileInput.value = '';
+    }
   }
 
   function validateRobloxLink(link) {
