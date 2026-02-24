@@ -855,90 +855,6 @@ img { display: block; max-width: 100%; }
   color: #999;
 }
 
-/* ===== PROPAGANDA SECTION ===== */
-.propaganda-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-}
-
-.prop-card,
-a.prop-card {
-  position: relative;
-  height: 300px;
-  border-radius: 8px;
-  overflow: hidden;
-  cursor: pointer;
-  opacity: 0;
-  transform: translateY(24px);
-  transition: all 0.5s ease;
-  text-decoration: none;
-  display: block;
-  color: inherit;
-}
-
-.prop-card.revealed {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.prop-featured { grid-column: span 1; }
-
-.prop-img {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  background-color: rgba(76,175,34,0.1);
-}
-
-.prop-img-1 { background-image: linear-gradient(135deg, rgba(76,175,34,0.3), rgba(0,0,0,0.5)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect fill="%23333" width="400" height="300"/><text x="50%" y="50%" font-size="24" fill="%234caf22" text-anchor="middle" dominant-baseline="middle">MILITARY BASE</text></svg>'); }
-.prop-img-2 { background-image: linear-gradient(135deg, rgba(76,175,34,0.3), rgba(0,0,0,0.5)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect fill="%23222" width="400" height="300"/><text x="50%" y="50%" font-size="24" fill="%234caf22" text-anchor="middle" dominant-baseline="middle">RECRUITMENT</text></svg>'); }
-.prop-img-3 { background-image: linear-gradient(135deg, rgba(76,175,34,0.3), rgba(0,0,0,0.5)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect fill="%23444" width="400" height="300"/><text x="50%" y="50%" font-size="24" fill="%234caf22" text-anchor="middle" dominant-baseline="middle">TRAINING</text></svg>'); }
-.prop-img-4 { background-image: linear-gradient(135deg, rgba(76,175,34,0.3), rgba(0,0,0,0.5)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect fill="%23111" width="400" height="300"/><text x="50%" y="50%" font-size="24" fill="%234caf22" text-anchor="middle" dominant-baseline="middle">OPERATIONS</text></svg>'); }
-
-.prop-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 60%, transparent 100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 24px;
-  opacity: 0;
-  transition: opacity var(--transition);
-}
-
-.prop-card:hover .prop-overlay { opacity: 1; }
-
-.prop-tag {
-  display: inline-block;
-  background: var(--green);
-  color: var(--black);
-  padding: 4px 10px;
-  border-radius: 4px;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  margin-bottom: 12px;
-  width: fit-content;
-}
-
-.prop-overlay h3 {
-  font-family: var(--font-head);
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin-bottom: 8px;
-  color: var(--white);
-}
-
-.prop-overlay p {
-  font-size: 13px;
-  color: #ccc;
-  line-height: 1.6;
-}
-
 /* ===== CREDITS SECTION ===== */
 .section-credits {
   background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(76,175,34,0.05) 100%);
@@ -1233,8 +1149,7 @@ a.prop-card {
 
   .services-grid,
   .links-grid,
-  .hicom-grid,
-  .propaganda-grid {
+  .hicom-grid {
     grid-template-columns: 1fr;
   }
 
