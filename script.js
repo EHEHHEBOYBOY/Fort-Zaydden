@@ -1,45 +1,31 @@
-/* ===== MOBILE MENU TOGGLE ===== */
 (function () {
   'use strict';
-
   const navToggle = document.getElementById('navToggle');
   const navLinks  = document.getElementById('navLinks');
-
   if (navToggle && navLinks) {
     navToggle.addEventListener('click', function () {
       navLinks.classList.toggle('open');
     });
-
-    /* Close menu when a link is clicked */
     navLinks.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
         navLinks.classList.remove('open');
       });
     });
   }
-
-  /* ===== PREVENT DEVELOPER TOOLS & RIGHT CLICK ===== */
   const youtubeUrl = 'https://www.youtube.com/watch?v=4JSphPAmvlE';
-
-  /* Prevent F12 and other developer tools shortcuts */
   document.addEventListener('keydown', function (e) {
     if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I') || (e.ctrlKey && e.shiftKey && e.key === 'C') || (e.ctrlKey && e.shiftKey && e.key === 'J') || (e.ctrlKey && e.key === 'U')) {
       e.preventDefault();
       window.location.href = youtubeUrl;
     }
   });
-
-  /* Prevent right-click context menu */
   document.addEventListener('contextmenu', function (e) {
     e.preventDefault();
     window.location.href = youtubeUrl;
   });
-
-  /* ===== SCROLL REVEAL ANIMATION ===== */
   const revealEls = document.querySelectorAll(
     '.service-card, .stat-card, .req-item, .stage, .hicom-card, .link-card, .prop-card'
   );
-
   const observer = new IntersectionObserver(
     function (entries) {
       entries.forEach(function (entry) {
@@ -51,17 +37,13 @@
     },
     { threshold: 0.12 }
   );
-
   revealEls.forEach(function (el, i) {
     el.style.opacity = '0';
     el.style.transform = 'translateY(24px)';
     el.style.transition = 'opacity 0.5s ease ' + (i % 4) * 0.08 + 's, transform 0.5s ease ' + (i % 4) * 0.08 + 's';
     observer.observe(el);
   });
-
-  /* ===== INJECT REVEAL STYLES ===== */
   const style = document.createElement('style');
   style.textContent = '.revealed { opacity: 1 !important; transform: translateY(0) !important; }';
   document.head.appendChild(style);
-
 })();
