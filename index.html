@@ -404,7 +404,28 @@
       </div>
       <div class="propaganda-grid">
         <a href="https://www.roblox.com/communities/35008361/Contributors-United-States-Congress#!/about" target="_blank" class="prop-card prop-featured">
-          <div class="prop-img" style="background-image: url('congress-logo.jpg'); background-size: contain; background-position: center; background-repeat: no-repeat;"></div>
+          <div class="prop-img prop-pattern-congress">
+            <svg viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <style>
+                  @keyframes shimmer-congress {
+                    0% { stroke-dashoffset: 500; }
+                    100% { stroke-dashoffset: -500; }
+                  }
+                  .congress-pattern { animation: shimmer-congress 3s linear infinite; stroke-dasharray: 500; }
+                </style>
+              </defs>
+              <circle cx="100" cy="100" r="80" fill="none" stroke="url(#grad-congress)" stroke-width="3" class="congress-pattern"/>
+              <polygon points="100,30 150,70 140,130 60,130 50,70" fill="none" stroke="url(#grad-congress)" stroke-width="2" class="congress-pattern"/>
+              <defs>
+                <linearGradient id="grad-congress" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#fff;stop-opacity:1" />
+                  <stop offset="50%" style="stop-color:#ff69b4;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#fff;stop-opacity:1" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
           <div class="prop-overlay">
             <span class="prop-tag">GOVERNMENT</span>
             <h3>United States Congress</h3>
@@ -412,7 +433,28 @@
           </div>
         </a>
         <a href="https://www.roblox.com/communities/32936585/XENOX-Department-of-Homeland-Security#!/about" target="_blank" class="prop-card">
-          <div class="prop-img" style="background-image: url('dhs-logo.png'); background-size: contain; background-position: center; background-repeat: no-repeat;"></div>
+          <div class="prop-img prop-pattern-dhs">
+            <svg viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <style>
+                  @keyframes shimmer-dhs {
+                    0% { stroke-dashoffset: 500; }
+                    100% { stroke-dashoffset: -500; }
+                  }
+                  .dhs-pattern { animation: shimmer-dhs 3s linear infinite; stroke-dasharray: 500; }
+                </style>
+              </defs>
+              <rect x="40" y="40" width="120" height="120" fill="none" stroke="url(#grad-dhs)" stroke-width="3" rx="10" class="dhs-pattern"/>
+              <path d="M 100 50 L 150 100 L 100 150 L 50 100 Z" fill="none" stroke="url(#grad-dhs)" stroke-width="2" class="dhs-pattern"/>
+              <defs>
+                <linearGradient id="grad-dhs" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#1e90ff;stop-opacity:1" />
+                  <stop offset="50%" style="stop-color:#fff;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#1e90ff;stop-opacity:1" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
           <div class="prop-overlay">
             <span class="prop-tag">SECURITY</span>
             <h3>Department of Homeland Security</h3>
@@ -420,7 +462,29 @@
           </div>
         </a>
         <a href="https://www.roblox.com/communities/33938673/NSA-National-Security-Agency#!/about" target="_blank" class="prop-card">
-          <div class="prop-img" style="background-image: url('nsa-logo.jpg'); background-size: contain; background-position: center; background-repeat: no-repeat;"></div>
+          <div class="prop-img prop-pattern-nsa">
+            <svg viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <style>
+                  @keyframes shimmer-nsa {
+                    0% { stroke-dashoffset: 500; }
+                    100% { stroke-dashoffset: -500; }
+                  }
+                  .nsa-pattern { animation: shimmer-nsa 3s linear infinite; stroke-dasharray: 500; }
+                </style>
+              </defs>
+              <circle cx="100" cy="100" r="70" fill="none" stroke="url(#grad-nsa)" stroke-width="3" class="nsa-pattern"/>
+              <path d="M 100 30 L 140 80 L 130 150 L 70 150 L 60 80 Z" fill="none" stroke="url(#grad-nsa)" stroke-width="2" class="nsa-pattern"/>
+              <circle cx="100" cy="100" r="30" fill="none" stroke="url(#grad-nsa)" stroke-width="2" class="nsa-pattern"/>
+              <defs>
+                <linearGradient id="grad-nsa" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#ff8c00;stop-opacity:1" />
+                  <stop offset="50%" style="stop-color:#fff;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#ff8c00;stop-opacity:1" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
           <div class="prop-overlay">
             <span class="prop-tag">INTELLIGENCE</span>
             <h3>National Security Agency</h3>
