@@ -9,7 +9,6 @@
       navLinks.classList.toggle('open');
     });
 
-    /* Close menu when a link is clicked */
     navLinks.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
         navLinks.classList.remove('open');
@@ -19,7 +18,6 @@
 
   const youtubeUrl = 'https://www.youtube.com/watch?v=4JSphPAmvlE';
 
-  /* Prevent F12 and other developer tools shortcuts */
   document.addEventListener('keydown', function (e) {
     if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I') || (e.ctrlKey && e.shiftKey && e.key === 'C') || (e.ctrlKey && e.shiftKey && e.key === 'J') || (e.ctrlKey && e.key === 'U')) {
       e.preventDefault();
@@ -27,7 +25,6 @@
     }
   });
 
-  /* Prevent right-click context menu */
   document.addEventListener('contextmenu', function (e) {
     e.preventDefault();
     window.location.href = youtubeUrl;
